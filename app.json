@@ -4,24 +4,9 @@
     "slug": "lexisearch",
     "version": "1.0.0",
     "scheme": "lexisearch",
-    "platforms": ["ios", "android", "web"],
-    "orientation": "portrait",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "assetBundlePatterns": [
-      "assets/**",
-      "data/**"
-    ],
+    "assetBundlePatterns": ["./assets/**"],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.lexisearch.app"
-    },
-    "android": {
-      "package": "com.lexisearch.app"
-    },
-    "web": {},
-    "plugins": [
-      "expo-router"
-    ]
+      "supportsTabletMode": true
+    }
   }
 }
