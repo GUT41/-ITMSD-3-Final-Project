@@ -1,0 +1,482 @@
+[
+  {
+    "id": "apple-0",
+    "word": "apple",
+    "definition": "a round fruit with red or green skin and crisp white flesh inside",
+    "example": "She ate an apple for breakfast.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ˈapəl"
+  },
+  {
+    "id": "abandon-1",
+    "word": "abandon",
+    "definition": "to leave someone or something, usually permanently, with no intention of returning",
+    "example": "They abandoned the house after the fire.",
+    "partOfSpeech": "verb",
+    "pronunciation": "əˈbandən"
+  },
+  {
+    "id": "ability-2",
+    "word": "ability",
+    "definition": "the skill or power to do something",
+    "example": "She has the ability to speak three languages.",
+    "partOfSpeech": "noun",
+    "pronunciation": "əˈbɪləti"
+  },
+  {
+    "id": "about-3",
+    "word": "about",
+    "definition": "on the subject of; concerning",
+    "example": "We talked about the weather.",
+    "partOfSpeech": "preposition",
+    "pronunciation": "əˈbaʊt"
+  },
+  {
+    "id": "above-4",
+    "word": "above",
+    "definition": "at or to a higher level or position than something else",
+    "example": "The plane flew above the clouds.",
+    "partOfSpeech": "preposition",
+    "pronunciation": "əˈbʌv"
+  },
+  {
+    "id": "abroad-5",
+    "word": "abroad",
+    "definition": "in or to a foreign country",
+    "example": "She traveled abroad last summer.",
+    "partOfSpeech": "adverb",
+    "pronunciation": "əˈbrɔːd"
+  },
+  {
+    "id": "absence-6",
+    "word": "absence",
+    "definition": "the state of being away from a place",
+    "example": "His absence was noticed by everyone.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ˈæbsəns"
+  },
+  {
+    "id": "absolute-7",
+    "word": "absolute",
+    "definition": "complete, total, or not limited in any way",
+    "example": "We need absolute silence during the exam.",
+    "partOfSpeech": "adjective",
+    "pronunciation": "ˈæbsəluːt"
+  },
+  {
+    "id": "absorb-8",
+    "word": "absorb",
+    "definition": "to take in or soak up a liquid or gas",
+    "example": "The paper absorbed the water.",
+    "partOfSpeech": "verb",
+    "pronunciation": "əbˈzɔːrb"
+  },
+  {
+    "id": "abstract-9",
+    "word": "abstract",
+    "definition": "existing in thought or as an idea but not having a physical or concrete form",
+    "example": "Love is an abstract concept.",
+    "partOfSpeech": "adjective",
+    "pronunciation": "ˈæbstrækt"
+  },
+  {
+    "id": "absurd-10",
+    "word": "absurd",
+    "definition": "silly, unreasonable, or ridiculous",
+    "example": "That idea is completely absurd.",
+    "partOfSpeech": "adjective",
+    "pronunciation": "əbˈsɜːrd"
+  },
+  {
+    "id": "abundance-11",
+    "word": "abundance",
+    "definition": "a large or plentiful amount of something",
+    "example": "The garden had an abundance of flowers.",
+    "partOfSpeech": "noun",
+    "pronunciation": "əˈbʌndəns"
+  },
+  {
+    "id": "abuse-12",
+    "word": "abuse",
+    "definition": "to treat someone with cruelty or violence; to use something for the wrong purpose",
+    "example": "The child was abused by the guardian.",
+    "partOfSpeech": "verb",
+    "pronunciation": "əˈbjuːz"
+  },
+  {
+    "id": "academic-13",
+    "word": "academic",
+    "definition": "relating to education and scholars, especially at a college or university",
+    "example": "She excels in academic subjects.",
+    "partOfSpeech": "adjective",
+    "pronunciation": "ˌækəˈdemɪk"
+  },
+  {
+    "id": "academy-14",
+    "word": "academy",
+    "definition": "a school or institution for training in special skills or subjects",
+    "example": "He attended a military academy.",
+    "partOfSpeech": "noun",
+    "pronunciation": "əˈkædəmi"
+  },
+  {
+    "id": "accent-15",
+    "word": "accent",
+    "definition": "a distinctive way of pronouncing words characteristic of a particular region or country",
+    "example": "She spoke with a French accent.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ˈæksent"
+  },
+  {
+    "id": "accept-16",
+    "word": "accept",
+    "definition": "to take or receive something offered; to agree to something",
+    "example": "I accept your apology.",
+    "partOfSpeech": "verb",
+    "pronunciation": "əkˈsept"
+  },
+  {
+    "id": "access-17",
+    "word": "access",
+    "definition": "the right or opportunity to use something; a way in or out of a place",
+    "example": "Students have access to the library.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ˈækses"
+  },
+  {
+    "id": "accident-18",
+    "word": "accident",
+    "definition": "an unexpected and unpleasant event that happens by chance",
+    "example": "She was hurt in a car accident.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ˈæksɪdənt"
+  },
+  {
+    "id": "account-19",
+    "word": "account",
+    "definition": "a record of money received and spent; a description or report of something",
+    "example": "I have a bank account.",
+    "partOfSpeech": "noun",
+    "pronunciation": "əˈkaʊnt"
+  },
+  {
+    "id": "accuse-20",
+    "word": "accuse",
+    "definition": "to claim that someone has done something illegal or wrong",
+    "example": "They accused him of stealing.",
+    "partOfSpeech": "verb",
+    "pronunciation": "əˈkjuːz"
+  },
+  {
+    "id": "accustom-21",
+    "word": "accustom",
+    "definition": "to make someone familiar with something by repeated exposure",
+    "example": "She accustomed herself to the new routine.",
+    "partOfSpeech": "verb",
+    "pronunciation": "əˈkʌstəm"
+  },
+  {
+    "id": "ache-22",
+    "word": "ache",
+    "definition": "a continuous dull pain in a part of the body",
+    "example": "I have a headache.",
+    "partOfSpeech": "noun",
+    "pronunciation": "eɪk"
+  },
+  {
+    "id": "achieve-23",
+    "word": "achieve",
+    "definition": "to successfully complete or accomplish something through effort",
+    "example": "She achieved her goals.",
+    "partOfSpeech": "verb",
+    "pronunciation": "əˈtʃiːv"
+  },
+  {
+    "id": "acid-24",
+    "word": "acid",
+    "definition": "a chemical substance that is sour and can burn or dissolve other substances",
+    "example": "Lemon juice contains acid.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ˈæsɪd"
+  },
+  {
+    "id": "acknowledge-25",
+    "word": "acknowledge",
+    "definition": "to accept or admit that something is true; to recognize someone's efforts or presence",
+    "example": "He acknowledged his mistake.",
+    "partOfSpeech": "verb",
+    "pronunciation": "əkˈnɒlɪdʒ"
+  },
+  {
+    "id": "acquire-26",
+    "word": "acquire",
+    "definition": "to get or obtain something; to come to have something",
+    "example": "She acquired new skills through training.",
+    "partOfSpeech": "verb",
+    "pronunciation": "əˈkwaɪər"
+  },
+  {
+    "id": "acre-27",
+    "word": "acre",
+    "definition": "a unit of land area, equal to 4,047 square meters",
+    "example": "The farm covers 50 acres.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ˈeɪkər"
+  },
+  {
+    "id": "act-28",
+    "word": "act",
+    "definition": "to do something; to perform; to behave in a certain way",
+    "example": "She acted quickly in the emergency.",
+    "partOfSpeech": "verb",
+    "pronunciation": "ækt"
+  },
+  {
+    "id": "action-29",
+    "word": "action",
+    "definition": "the process of doing something; a thing done",
+    "example": "We must take action immediately.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ˈækʃən"
+  },
+  {
+    "id": "active-30",
+    "word": "active",
+    "definition": "engaged in action; energetic; constantly doing something",
+    "example": "She is very active in sports.",
+    "partOfSpeech": "adjective",
+    "pronunciation": "ˈæktɪv"
+  },
+  {
+    "id": "activity-31",
+    "word": "activity",
+    "definition": "the condition of being active or doing things; a pursuit or pastime",
+    "example": "Physical activity is good for health.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ækˈtɪvɪti"
+  },
+  {
+    "id": "actual-32",
+    "word": "actual",
+    "definition": "existing in reality or fact; real",
+    "example": "The actual cost was higher than expected.",
+    "partOfSpeech": "adjective",
+    "pronunciation": "ˈæktʃuəl"
+  },
+  {
+    "id": "actually-33",
+    "word": "actually",
+    "definition": "in fact; really; in reality",
+    "example": "I actually don't like that movie.",
+    "partOfSpeech": "adverb",
+    "pronunciation": "ˈæktʃuəli"
+  },
+  {
+    "id": "acute-34",
+    "word": "acute",
+    "definition": "sharp or severe; (of an illness) coming on suddenly and lasting a short time",
+    "example": "She felt an acute pain in her leg.",
+    "partOfSpeech": "adjective",
+    "pronunciation": "əˈkjuːt"
+  },
+  {
+    "id": "adapt-35",
+    "word": "adapt",
+    "definition": "to change to suit new conditions or circumstances",
+    "example": "Animals adapt to their environment.",
+    "partOfSpeech": "verb",
+    "pronunciation": "əˈdæpt"
+  },
+  {
+    "id": "add-36",
+    "word": "add",
+    "definition": "to put something with another thing; to combine numbers or quantities",
+    "example": "Add the eggs to the mixture.",
+    "partOfSpeech": "verb",
+    "pronunciation": "æd"
+  },
+  {
+    "id": "addition-37",
+    "word": "addition",
+    "definition": "the act of adding; something added",
+    "example": "In addition to the main course, we had dessert.",
+    "partOfSpeech": "noun",
+    "pronunciation": "əˈdɪʃən"
+  },
+  {
+    "id": "address-38",
+    "word": "address",
+    "definition": "a location where someone lives or works; to speak to someone",
+    "example": "What is your address?",
+    "partOfSpeech": "noun",
+    "pronunciation": "əˈdres"
+  },
+  {
+    "id": "adjust-39",
+    "word": "adjust",
+    "definition": "to change something slightly to make it better or suitable",
+    "example": "Adjust the temperature to your preference.",
+    "partOfSpeech": "verb",
+    "pronunciation": "əˈdʒʌst"
+  },
+  {
+    "id": "admire-40",
+    "word": "admire",
+    "definition": "to respect and approve of someone or something; to look at with pleasure",
+    "example": "I admire her courage.",
+    "partOfSpeech": "verb",
+    "pronunciation": "ədˈmaɪər"
+  },
+  {
+    "id": "admit-41",
+    "word": "admit",
+    "definition": "to allow someone to enter; to accept something as true",
+    "example": "She admitted her mistake.",
+    "partOfSpeech": "verb",
+    "pronunciation": "ədˈmɪt"
+  },
+  {
+    "id": "adopt-42",
+    "word": "adopt",
+    "definition": "to take a child legally as your own; to accept something officially",
+    "example": "They adopted a baby from the orphanage.",
+    "partOfSpeech": "verb",
+    "pronunciation": "əˈdɒpt"
+  },
+  {
+    "id": "adore-43",
+    "word": "adore",
+    "definition": "to love someone or something very much",
+    "example": "She adores her grandmother.",
+    "partOfSpeech": "verb",
+    "pronunciation": "əˈdɔːr"
+  },
+  {
+    "id": "adult-44",
+    "word": "adult",
+    "definition": "a person who is fully grown or has reached the age of maturity",
+    "example": "The movie is for adults only.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ˈædʌlt"
+  },
+  {
+    "id": "advance-45",
+    "word": "advance",
+    "definition": "to move forward; to make progress; to promote",
+    "example": "Technology advances every year.",
+    "partOfSpeech": "verb",
+    "pronunciation": "ədˈvɑːns"
+  },
+  {
+    "id": "advantage-46",
+    "word": "advantage",
+    "definition": "a condition or factor favorable to success; a benefit",
+    "example": "Experience gives her an advantage.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ədˈvɑːntɪdʒ"
+  },
+  {
+    "id": "adventure-47",
+    "word": "adventure",
+    "definition": "an exciting or unusual experience; a daring feat",
+    "example": "They went on an adventure in the mountains.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ədˈventʃər"
+  },
+  {
+    "id": "adverb-48",
+    "word": "adverb",
+    "definition": "a word that modifies a verb, adjective, or another adverb",
+    "example": "Quickly is an adverb in that sentence.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ˈædvɜːrb"
+  },
+  {
+    "id": "adversary-49",
+    "word": "adversary",
+    "definition": "an opponent or enemy",
+    "example": "He faced his adversary in the competition.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ˈædvɜːseri"
+  },
+  {
+    "id": "adverse-50",
+    "word": "adverse",
+    "definition": "harmful or unfavorable; opposite in position or direction",
+    "example": "Adverse weather conditions delayed the flight.",
+    "partOfSpeech": "adjective",
+    "pronunciation": "ədˈvɜːrs"
+  },
+  {
+    "id": "advertise-51",
+    "word": "advertise",
+    "definition": "to describe a product publicly to encourage people to buy it",
+    "example": "They advertise their new product on television.",
+    "partOfSpeech": "verb",
+    "pronunciation": "ˈædvərtaɪz"
+  },
+  {
+    "id": "advice-52",
+    "word": "advice",
+    "definition": "guidance or suggestions about the best course of action",
+    "example": "She gave me good advice about my career.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ədˈvaɪs"
+  },
+  {
+    "id": "advise-53",
+    "word": "advise",
+    "definition": "to give advice to someone; to counsel",
+    "example": "I advise you to study harder.",
+    "partOfSpeech": "verb",
+    "pronunciation": "ədˈvaɪz"
+  },
+  {
+    "id": "advocate-54",
+    "word": "advocate",
+    "definition": "to publicly recommend or support something; a person who supports a cause",
+    "example": "She advocates for environmental protection.",
+    "partOfSpeech": "verb",
+    "pronunciation": "ˈædvəkeɪt"
+  },
+  {
+    "id": "aeroplanes-55",
+    "word": "aeroplane",
+    "definition": "a powered flying vehicle with wings and an engine; an airplane",
+    "example": "The aeroplane landed safely.",
+    "partOfSpeech": "noun",
+    "pronunciation": "ˈeərəpleɪn"
+  },
+  {
+    "id": "affair-56",
+    "word": "affair",
+    "definition": "an event or matter; a romantic relationship outside of marriage",
+    "example": "It was a private affair.",
+    "partOfSpeech": "noun",
+    "pronunciation": "əˈfer"
+  },
+  {
+    "id": "affect-57",
+    "word": "affect",
+    "definition": "to have an influence on someone or something; to change",
+    "example": "The weather affects my mood.",
+    "partOfSpeech": "verb",
+    "pronunciation": "əˈfekt"
+  },
+  {
+    "id": "affection-58",
+    "word": "affection",
+    "definition": "a feeling of liking or love",
+    "example": "She showed affection toward her pet.",
+    "partOfSpeech": "noun",
+    "pronunciation": "əˈfekʃən"
+  },
+  {
+    "id": "afford-59",
+    "word": "afford",
+    "definition": "to have enough money to buy something; to be able to do something without difficulty",
+    "example": "Can you afford that house?",
+    "partOfSpeech": "verb",
+    "pronunciation": "əˈfɔːrd"
+  }
+]
