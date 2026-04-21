@@ -3,11 +3,21 @@
     "strict": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "jsx": "react-native",
     "skipLibCheck": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "target": "ES2017",
+    "jsx": "react-native",
     "types": [
-      "jest"
+      "jest",
+      "node"
     ]
   },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
   "extends": "expo/tsconfig.base"
 }

@@ -1,12 +1,12 @@
 [
-  {"id":"apple-0","word":"apple","definition":"a round fruit","example":"She ate an apple.","partOfSpeech":"noun","pronunciation":"ˈapəl"},
-  {"id":"abandon-1","word":"abandon","definition":"to leave someone permanently","example":"They abandoned the house.","partOfSpeech":"verb","pronunciation":"əˈbandən"},
-  {"id":"ability-2","word":"ability","definition":"the skill or power","example":"She has the ability to speak.","partOfSpeech":"noun","pronunciation":"əˈbɪləti"},
-  {"id":"about-3","word":"about","definition":"concerning or regarding","example":"We talked about the weather.","partOfSpeech":"preposition","pronunciation":"əˈbaʊt"},
-  {"id":"above-4","word":"above","definition":"at a higher level","example":"The plane flew above clouds.","partOfSpeech":"preposition","pronunciation":"əˈbʌv"},
-  {"id":"abroad-5","word":"abroad","definition":"in a foreign country","example":"She traveled abroad.","partOfSpeech":"adverb","pronunciation":"əˈbrɔːd"},
-  {"id":"absence-6","word":"absence","definition":"state of being away","example":"His absence was noticed.","partOfSpeech":"noun","pronunciation":"ˈæbsəns"},
-  {"id":"absolute-7","word":"absolute","definition":"complete or total","example":"We need absolute silence.","partOfSpeech":"adjective","pronunciation":"ˈæbsəluːt"},
-  {"id":"absorb-8","word":"absorb","definition":"to take in or soak up","example":"Paper absorbed water.","partOfSpeech":"verb","pronunciation":"əbˈzɔːrb"},
-  {"id":"abstract-9","word":"abstract","definition":"existing in thought only","example":"Love is abstract.","partOfSpeech":"adjective","pronunciation":"ˈæbstrækt"}
+  {"id":"apple-0","word":"apple","definition":"a round fruit","example":"She ate an apple.","partOfSpeech":"noun","pronunciation":"AP-ul"},
+  {"id":"abandon-1","word":"abandon","definition":"to leave permanently","example":"They abandoned the house.","partOfSpeech":"verb","pronunciation":"uh-BAN-dun"},
+  {"id":"ability-2","word":"ability","definition":"the skill or power","example":"She has the ability to speak.","partOfSpeech":"noun","pronunciation":"uh-BIL-uh-tee"},
+  {"id":"about-3","word":"about","definition":"concerning or regarding","example":"We talked about the weather.","partOfSpeech":"preposition","pronunciation":"uh-BOWT"},
+  {"id":"above-4","word":"above","definition":"at a higher level","example":"The plane flew above clouds.","partOfSpeech":"preposition","pronunciation":"uh-BUV"},
+  {"id":"abroad-5","word":"abroad","definition":"in a foreign country","example":"She traveled abroad.","partOfSpeech":"adverb","pronunciation":"uh-BRAWD"},
+  {"id":"absence-6","word":"absence","definition":"state of being away","example":"His absence was noticed.","partOfSpeech":"noun","pronunciation":"AB-sens"},
+  {"id":"absolute-7","word":"absolute","definition":"complete or total","example":"We need absolute silence.","partOfSpeech":"adjective","pronunciation":"AB-suh-loot"},
+  {"id":"absorb-8","word":"absorb","definition":"to take in or soak up","example":"Paper absorbed water.","partOfSpeech":"verb","pronunciation":"ub-ZORB"},
+  {"id":"abstract-9","word":"abstract","definition":"existing in thought only","example":"Love is abstract.","partOfSpeech":"adjective","pronunciation":"AB-strakt"}
 ]
