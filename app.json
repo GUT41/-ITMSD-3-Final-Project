@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "lexisearch",
+    "slug": "lexisearch",
+    "version": "1.0.0",
+    "scheme": "lexisearch",
+    "assetBundlePatterns": ["./assets/**"],
+    "ios": {
+      "supportsTabletMode": true
+    }
+  }
+}
