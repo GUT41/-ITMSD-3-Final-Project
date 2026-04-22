@@ -6,9 +6,12 @@ import wordData from '../../data/words.json';
 let trie: Trie | null = null;
 let wordList: Word[] = [];
 let wordMap: Map<string, Word> = new Map();
+let isInitialized = false;
 
 export async function initDictionary(): Promise<void> {
   try {
+    isInitialized = false;
+    wordMap.clear();
     wordList = (wordData as Word[]).sort((a, b) =>
       a.word.localeCompare(b.word)
     );
@@ -19,11 +22,17 @@ export async function initDictionary(): Promise<void> {
       wordMap.set(word.id, word);
     }
 
+    isInitialized = true;
     console.log(`✓ Dictionary initialized: ${wordList.length} words`);
   } catch (error) {
+    isInitialized = false;
     console.error('✗ Dictionary init failed:', error);
     throw error;
   }
+}
+
+export function isDictionaryReady(): boolean {
+  return isInitialized;
 }
 
 export function getAllWords(): Word[] {

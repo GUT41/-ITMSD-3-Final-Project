@@ -1,14 +1,14 @@
 import { create } from 'zustand';
-import { Word } from '../types/index';
+import { Word, SearchResult } from '../types/index';
 
 interface SearchStore {
   searchQuery: string;
-  results: Word[];
+  results: SearchResult[];
   savedWords: Word[];
   searchHistory: string[];
 
   setSearchQuery: (query: string) => void;
-  setResults: (results: Word[]) => void;
+  setResults: (results: SearchResult[]) => void;
   setSavedWords: (words: Word[]) => void;
   setSearchHistory: (history: string[]) => void;
 }
