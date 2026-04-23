@@ -4,12 +4,19 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { useSearchStore } from '../../src/store/searchStore';
 import { getAllWords } from '../../src/services/dictionaryService';
 import { useSearch } from '../../src/hooks/useSearch';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { addSavedWord, removeSavedWord } from '../../src/services/storageService';
 import { SearchResult } from '../../src/types';
+import { useColorScheme } from 'react-native';
+import { getThemeColors } from '../../src/theme/colors';
+import { useSettingsStore } from '../../src/store/settingsStore';
 
 export default function SearchScreen() {
   const router = useRouter();
+  const systemScheme = useColorScheme();
+  const themeMode = useSettingsStore((state) => state.themeMode);
+  const colors = getThemeColors(themeMode, systemScheme);
+  const styles = useMemo(() => createStyles(colors), [colors]);
   const [inputValue, setInputValue] = useState('');
   const { debouncedSearch } = useSearch();
   const results = useSearchStore((state) => state.results);
@@ -53,7 +60,12 @@ export default function SearchScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>LexiSearch</Text>
+      <View style={styles.headerRow}>
+        <Text style={styles.title}>LexiSearch</Text>
+        <TouchableOpacity style={styles.settingsButton} onPress={() => router.push('/settings')}>
+          <MaterialIcons name="settings" size={22} color={colors.primary} />
+        </TouchableOpacity>
+      </View>
 
       <TextInput
         style={styles.searchInput}
@@ -119,7 +131,7 @@ export default function SearchScreen() {
                   <MaterialIcons
                     name={isSaved ? 'bookmark' : 'bookmark-border'}
                     size={24}
-                    color={isSaved ? '#0F6E56' : '#ccc'}
+                    color={isSaved ? colors.primary : colors.iconInactive}
                   />
                 </TouchableOpacity>
               </View>
@@ -131,111 +143,127 @@ export default function SearchScreen() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    paddingTop: 20,
-    paddingHorizontal: 16,
-  },
-  title: {
-    fontSize: 28,
-    fontWeight: '700',
-    marginBottom: 16,
-  },
-  searchInput: {
-    borderWidth: 1,
-    borderColor: '#ddd',
-    borderRadius: 8,
-    paddingHorizontal: 12,
-    paddingVertical: 10,
-    fontSize: 16,
-    marginBottom: 12,
-  },
-  historyContainer: {
-    marginBottom: 12,
-  },
-  historyLabel: {
-    fontSize: 12,
-    fontWeight: '600',
-    color: '#666',
-    textTransform: 'uppercase',
-    marginBottom: 8,
-  },
-  historyChips: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 8,
-  },
-  historyChip: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    backgroundColor: '#f0f0f0',
-    borderRadius: 20,
-    borderWidth: 1,
-    borderColor: '#ddd',
-  },
-  historyChipText: {
-    fontSize: 12,
-    color: '#333',
-  },
-  count: {
-    fontSize: 12,
-    color: '#0F6E56',
-    marginBottom: 12,
-    fontWeight: '500',
-  },
-  wordRowContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 8,
-    gap: 8,
-  },
-  wordRow: {
-    flex: 1,
-    flexDirection: 'row',
-    paddingVertical: 12,
-    paddingHorizontal: 12,
-    backgroundColor: '#f5f5f5',
-    borderRadius: 8,
-    borderLeftWidth: 3,
-    borderLeftColor: '#0F6E56',
-    alignItems: 'center',
-  },
-  wordContent: {
-    flex: 1,
-  },
-  word: {
-    fontSize: 16,
-    fontWeight: '600',
-    marginBottom: 4,
-  },
-  def: {
-    fontSize: 12,
-    color: '#666',
-  },
-  distance: {
-    fontSize: 11,
-    color: '#999',
-    paddingHorizontal: 8,
-  },
-  saveButton: {
-    paddingHorizontal: 12,
-    paddingVertical: 12,
-  },
-  noResults: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  noResultsText: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: '#333',
-    marginBottom: 8,
-  },
-  noResultsSubtext: {
-    fontSize: 14,
-    color: '#999',
-  },
-});
+function createStyles(colors: ReturnType<typeof getThemeColors>) {
+  return StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: colors.background,
+      paddingTop: 20,
+      paddingHorizontal: 16,
+    },
+    title: {
+      fontSize: 28,
+      fontWeight: '700',
+      marginBottom: 12,
+      color: colors.textPrimary,
+    },
+    headerRow: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+      marginBottom: 4,
+    },
+    settingsButton: {
+      paddingHorizontal: 8,
+      paddingVertical: 8,
+    },
+    searchInput: {
+      borderWidth: 1,
+      borderColor: colors.border,
+      borderRadius: 8,
+      paddingHorizontal: 12,
+      paddingVertical: 10,
+      fontSize: 16,
+      marginBottom: 12,
+      color: colors.textPrimary,
+      backgroundColor: colors.surface,
+    },
+    historyContainer: {
+      marginBottom: 12,
+    },
+    historyLabel: {
+      fontSize: 12,
+      fontWeight: '600',
+      color: colors.textSecondary,
+      textTransform: 'uppercase',
+      marginBottom: 8,
+    },
+    historyChips: {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      gap: 8,
+    },
+    historyChip: {
+      paddingHorizontal: 12,
+      paddingVertical: 6,
+      backgroundColor: colors.surfaceMuted,
+      borderRadius: 20,
+      borderWidth: 1,
+      borderColor: colors.border,
+    },
+    historyChipText: {
+      fontSize: 12,
+      color: colors.textPrimary,
+    },
+    count: {
+      fontSize: 12,
+      color: colors.primary,
+      marginBottom: 12,
+      fontWeight: '500',
+    },
+    wordRowContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginBottom: 8,
+      gap: 8,
+    },
+    wordRow: {
+      flex: 1,
+      flexDirection: 'row',
+      paddingVertical: 12,
+      paddingHorizontal: 12,
+      backgroundColor: colors.surfaceMuted,
+      borderRadius: 8,
+      borderLeftWidth: 3,
+      borderLeftColor: colors.primary,
+      alignItems: 'center',
+    },
+    wordContent: {
+      flex: 1,
+    },
+    word: {
+      fontSize: 16,
+      fontWeight: '600',
+      marginBottom: 4,
+      color: colors.textPrimary,
+    },
+    def: {
+      fontSize: 12,
+      color: colors.textSecondary,
+    },
+    distance: {
+      fontSize: 11,
+      color: colors.textMuted,
+      paddingHorizontal: 8,
+    },
+    saveButton: {
+      paddingHorizontal: 12,
+      paddingVertical: 12,
+    },
+    noResults: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    noResultsText: {
+      fontSize: 18,
+      fontWeight: '600',
+      color: colors.textPrimary,
+      marginBottom: 8,
+    },
+    noResultsSubtext: {
+      fontSize: 14,
+      color: colors.textMuted,
+    },
+  });
+}

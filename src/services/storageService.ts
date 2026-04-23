@@ -1,8 +1,10 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Word } from '../types/index';
+import { ThemeMode } from '../theme/colors';
 
 const SAVED_WORDS_KEY = '@lexisearch/savedWords';
 const SEARCH_HISTORY_KEY = '@lexisearch/history';
+const THEME_MODE_KEY = '@lexisearch/themeMode';
 
 export async function getSavedWords(): Promise<Word[]> {
   try {
@@ -56,6 +58,26 @@ export async function clearSearchHistory(): Promise<void> {
     await AsyncStorage.removeItem(SEARCH_HISTORY_KEY);
   } catch (error) {
     console.error('Error clearing history:', error);
+  }
+}
+
+export async function getThemeMode(): Promise<ThemeMode | null> {
+  try {
+    const mode = await AsyncStorage.getItem(THEME_MODE_KEY);
+    if (mode === 'system' || mode === 'light' || mode === 'dark') {
+      return mode;
+    }
+    return null;
+  } catch (error) {
+    return null;
+  }
+}
+
+export async function saveThemeMode(mode: ThemeMode): Promise<void> {
+  try {
+    await AsyncStorage.setItem(THEME_MODE_KEY, mode);
+  } catch (error) {
+    console.error('Error saving theme mode:', error);
   }
 }
 
