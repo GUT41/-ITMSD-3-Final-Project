@@ -1,10 +1,11 @@
 import { View, TextInput, FlatList, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { useRouter } from 'expo-router';
+import { MaterialIcons } from '@expo/vector-icons';
 import { useSearchStore } from '../../src/store/searchStore';
-import { getAllWords, isDictionaryReady } from '../../src/services/dictionaryService';
+import { getAllWords } from '../../src/services/dictionaryService';
 import { useSearch } from '../../src/hooks/useSearch';
 import { useState } from 'react';
-import { SearchResult } from '../../src/types';
+import { addSavedWord, removeSavedWord } from '../../src/services/storageService';
 
 export default function SearchScreen() {
   const router = useRouter();
@@ -12,23 +13,33 @@ export default function SearchScreen() {
   const { debouncedSearch } = useSearch();
   const results = useSearchStore((state) => state.results);
   const allWords = getAllWords();
-  const isReady = isDictionaryReady();
+  const savedWords = useSearchStore((state) => state.savedWords);
+  const setSavedWords = useSearchStore((state) => state.setSavedWords);
+
+  const savedWordIds = new Set(savedWords.map((w) => w.id));
 
   const handleSearch = (text: string) => {
     setInputValue(text);
     debouncedSearch(text);
   };
 
-  const displayData: SearchResult[] = inputValue.trim() ? results : allWords;
+  const handleSaveWord = async (word: typeof allWords[0]) => {
+    try {
+      if (savedWordIds.has(word.id)) {
+        // Remove
+        await removeSavedWord(word.id);
+        setSavedWords(savedWords.filter((w) => w.id !== word.id));
+      } else {
+        // Add
+        await addSavedWord(word);
+        setSavedWords([word, ...savedWords]);
+      }
+    } catch (error) {
+      console.error('Error saving word:', error);
+    }
+  };
 
-  if (!isReady) {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.title}>LexiSearch</Text>
-        <Text style={styles.loadingText}>Loading dictionary...</Text>
-      </View>
-    );
-  }
+  const displayData = inputValue.trim() ? results : allWords;
 
   return (
     <View style={styles.container}>
@@ -55,22 +66,38 @@ export default function SearchScreen() {
         <FlatList
           data={displayData}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <TouchableOpacity
-              style={styles.wordRow}
-              onPress={() => router.push(`/word/${item.id}`)}
-            >
-              <View style={styles.wordContent}>
-                <Text style={styles.word}>{item.word}</Text>
-                <Text style={styles.def} numberOfLines={1}>
-                  {item.definition}
-                </Text>
+          renderItem={({ item }) => {
+            const isSaved = savedWordIds.has(item.id);
+            return (
+              <View style={styles.wordRowContainer}>
+                <TouchableOpacity
+                  style={styles.wordRow}
+                  onPress={() => router.push(`/word/${item.id}`)}
+                >
+                  <View style={styles.wordContent}>
+                    <Text style={styles.word}>{item.word}</Text>
+                    <Text style={styles.def} numberOfLines={1}>
+                      {item.definition}
+                    </Text>
+                  </View>
+                  {item.distance !== undefined && (
+                    <Text style={styles.distance}>~{item.distance}</Text>
+                  )}
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  style={styles.saveButton}
+                  onPress={() => handleSaveWord(item)}
+                >
+                  <MaterialIcons
+                    name={isSaved ? 'bookmark' : 'bookmark-border'}
+                    size={24}
+                    color={isSaved ? '#0F6E56' : '#ccc'}
+                  />
+                </TouchableOpacity>
               </View>
-              {item.distance !== undefined && (
-                <Text style={styles.distance}>~{item.distance}</Text>
-              )}
-            </TouchableOpacity>
-          )}
+            );
+          }}
         />
       )}
     </View>
@@ -104,11 +131,17 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     fontWeight: '500',
   },
+  wordRowContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 8,
+    gap: 8,
+  },
   wordRow: {
+    flex: 1,
     flexDirection: 'row',
     paddingVertical: 12,
     paddingHorizontal: 12,
-    marginBottom: 8,
     backgroundColor: '#f5f5f5',
     borderRadius: 8,
     borderLeftWidth: 3,
@@ -132,6 +165,10 @@ const styles = StyleSheet.create({
     color: '#999',
     paddingHorizontal: 8,
   },
+  saveButton: {
+    paddingHorizontal: 12,
+    paddingVertical: 12,
+  },
   noResults: {
     flex: 1,
     justifyContent: 'center',
@@ -146,9 +183,5 @@ const styles = StyleSheet.create({
   noResultsSubtext: {
     fontSize: 14,
     color: '#999',
-  },
-  loadingText: {
-    fontSize: 14,
-    color: '#666',
   },
 });
