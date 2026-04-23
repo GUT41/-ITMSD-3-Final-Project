@@ -6,6 +6,7 @@ import { getAllWords } from '../../src/services/dictionaryService';
 import { useSearch } from '../../src/hooks/useSearch';
 import { useState } from 'react';
 import { addSavedWord, removeSavedWord } from '../../src/services/storageService';
+import { SearchResult } from '../../src/types';
 
 export default function SearchScreen() {
   const router = useRouter();
@@ -15,12 +16,20 @@ export default function SearchScreen() {
   const allWords = getAllWords();
   const savedWords = useSearchStore((state) => state.savedWords);
   const setSavedWords = useSearchStore((state) => state.setSavedWords);
+  const searchHistory = useSearchStore((state) => state.searchHistory);
+  const setSearchQuery = useSearchStore((state) => state.setSearchQuery);
 
   const savedWordIds = new Set(savedWords.map((w) => w.id));
 
   const handleSearch = (text: string) => {
     setInputValue(text);
     debouncedSearch(text);
+  };
+
+  const handleHistoryTap = (query: string) => {
+    setInputValue(query);
+    setSearchQuery(query);
+    debouncedSearch(query);
   };
 
   const handleSaveWord = async (word: typeof allWords[0]) => {
@@ -39,7 +48,8 @@ export default function SearchScreen() {
     }
   };
 
-  const displayData = inputValue.trim() ? results : allWords;
+  const displayData: SearchResult[] = inputValue.trim() ? results : allWords;
+  const showHistory = !inputValue.trim() && searchHistory.length > 0;
 
   return (
     <View style={styles.container}>
@@ -52,6 +62,23 @@ export default function SearchScreen() {
         value={inputValue}
         onChangeText={handleSearch}
       />
+
+      {showHistory && (
+        <View style={styles.historyContainer}>
+          <Text style={styles.historyLabel}>Recent Searches</Text>
+          <View style={styles.historyChips}>
+            {searchHistory.slice(0, 5).map((query, idx) => (
+              <TouchableOpacity
+                key={`${query}-${idx}`}
+                style={styles.historyChip}
+                onPress={() => handleHistoryTap(query)}
+              >
+                <Text style={styles.historyChipText}>{query}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+        </View>
+      )}
 
       <Text style={styles.count}>
         {displayData.length} {inputValue ? 'found' : 'words'} ✓
@@ -124,6 +151,33 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     fontSize: 16,
     marginBottom: 12,
+  },
+  historyContainer: {
+    marginBottom: 12,
+  },
+  historyLabel: {
+    fontSize: 12,
+    fontWeight: '600',
+    color: '#666',
+    textTransform: 'uppercase',
+    marginBottom: 8,
+  },
+  historyChips: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  historyChip: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    backgroundColor: '#f0f0f0',
+    borderRadius: 20,
+    borderWidth: 1,
+    borderColor: '#ddd',
+  },
+  historyChipText: {
+    fontSize: 12,
+    color: '#333',
   },
   count: {
     fontSize: 12,

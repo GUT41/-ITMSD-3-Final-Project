@@ -11,6 +11,8 @@ interface SearchStore {
   setResults: (results: SearchResult[]) => void;
   setSavedWords: (words: Word[]) => void;
   setSearchHistory: (history: string[]) => void;
+  addToHistory: (query: string) => void;
+  clearHistory: () => void;
 }
 
 export const useSearchStore = create<SearchStore>((set) => ({
@@ -23,4 +25,14 @@ export const useSearchStore = create<SearchStore>((set) => ({
   setResults: (results) => set({ results }),
   setSavedWords: (words) => set({ savedWords: words }),
   setSearchHistory: (history) => set({ searchHistory: history }),
+  addToHistory: (query) =>
+    set((state) => {
+      const trimmed = query.trim();
+      if (!trimmed) {
+        return state;
+      }
+      const deduped = [trimmed, ...state.searchHistory.filter((item) => item !== trimmed)];
+      return { searchHistory: deduped.slice(0, 10) };
+    }),
+  clearHistory: () => set({ searchHistory: [] }),
 }));

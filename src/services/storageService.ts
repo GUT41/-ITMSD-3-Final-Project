@@ -2,6 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Word } from '../types/index';
 
 const SAVED_WORDS_KEY = '@lexisearch/savedWords';
+const SEARCH_HISTORY_KEY = '@lexisearch/history';
 
 export async function getSavedWords(): Promise<Word[]> {
   try {
@@ -34,9 +35,30 @@ export async function removeSavedWord(wordId: string): Promise<void> {
 }
 
 export async function getSearchHistory(): Promise<string[]> {
-  return [];
+  try {
+    const data = await AsyncStorage.getItem(SEARCH_HISTORY_KEY);
+    return data ? JSON.parse(data) : [];
+  } catch (error) {
+    return [];
+  }
+}
+
+export async function addToSearchHistory(queries: string[]): Promise<void> {
+  try {
+    await AsyncStorage.setItem(SEARCH_HISTORY_KEY, JSON.stringify(queries));
+  } catch (error) {
+    console.error('Error saving history:', error);
+  }
+}
+
+export async function clearSearchHistory(): Promise<void> {
+  try {
+    await AsyncStorage.removeItem(SEARCH_HISTORY_KEY);
+  } catch (error) {
+    console.error('Error clearing history:', error);
+  }
 }
 
 export async function saveSearchHistory(history: string[]): Promise<void> {
-  console.log('History:', history.length);
+  await addToSearchHistory(history);
 }
