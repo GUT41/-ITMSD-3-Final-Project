@@ -1,9 +1,12 @@
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, StyleSheet, useColorScheme } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { MaterialIcons } from '@expo/vector-icons';
-import { getWordById } from '../../src/services/dictionaryService';
+import { useMemo } from 'react';
+import { getRelatedWords, getWordById } from '../../src/services/dictionaryService';
 import { useSearchStore } from '../../src/store/searchStore';
 import { addSavedWord, removeSavedWord } from '../../src/services/storageService';
+import { useSettingsStore } from '../../src/store/settingsStore';
+import { getThemeColors } from '../../src/theme/colors';
 
 export default function WordDetailScreen() {
   const router = useRouter();
@@ -11,13 +14,17 @@ export default function WordDetailScreen() {
   const word = getWordById(typeof id === 'string' ? id : '');
   const savedWords = useSearchStore((state) => state.savedWords);
   const setSavedWords = useSearchStore((state) => state.setSavedWords);
+  const systemScheme = useColorScheme();
+  const themeMode = useSettingsStore((state) => state.themeMode);
+  const colors = getThemeColors(themeMode, systemScheme);
+  const styles = useMemo(() => createStyles(colors), [colors]);
 
   if (!word) {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
           <TouchableOpacity onPress={() => router.back()}>
-            <MaterialIcons name="arrow-back" size={24} color="#1a1a1a" />
+            <MaterialIcons name="arrow-back" size={24} color={colors.textPrimary} />
           </TouchableOpacity>
         </View>
         <View style={styles.errorContainer}>
@@ -29,6 +36,7 @@ export default function WordDetailScreen() {
   }
 
   const isSaved = savedWords.some((w) => w.id === word.id);
+  const related = getRelatedWords(word.id);
 
   const handleSave = async () => {
     try {
@@ -49,7 +57,7 @@ export default function WordDetailScreen() {
       {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => router.back()}>
-          <MaterialIcons name="arrow-back" size={24} color="#1a1a1a" />
+          <MaterialIcons name="arrow-back" size={24} color={colors.textPrimary} />
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.saveButton, isSaved && styles.saveButtonActive]}
@@ -58,7 +66,7 @@ export default function WordDetailScreen() {
           <MaterialIcons
             name={isSaved ? 'bookmark' : 'bookmark-border'}
             size={24}
-            color={isSaved ? '#0F6E56' : '#ccc'}
+            color={isSaved ? colors.primary : colors.iconInactive}
           />
         </TouchableOpacity>
       </View>
@@ -96,10 +104,50 @@ export default function WordDetailScreen() {
         {word.example && (
           <View style={styles.section}>
             <Text style={styles.sectionLabel}>
-              <MaterialIcons name="lightbulb" size={14} color="#0F6E56" /> Example
+              <MaterialIcons name="lightbulb" size={14} color={colors.primary} /> Example
             </Text>
             <View style={styles.exampleBox}>
               <Text style={styles.example}>"{word.example}"</Text>
+            </View>
+          </View>
+        )}
+
+        {/* Related Words */}
+        {related.length > 0 && (
+          <View style={styles.section}>
+            <Text style={styles.sectionLabel}>Related Words</Text>
+            <View style={styles.relatedWordsContainer}>
+              {related.map((rel) => (
+                <TouchableOpacity
+                  key={rel.id}
+                  style={styles.relatedWordChip}
+                  onPress={() => router.push(`/word/${rel.id}`)}
+                >
+                  <Text style={styles.relatedWordText}>{rel.word}</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+          </View>
+        )}
+
+        {/* Etymology */}
+        {!!word.etymology && (
+          <View style={styles.section}>
+            <Text style={styles.sectionLabel}>Etymology</Text>
+            <Text style={styles.etymology}>{word.etymology}</Text>
+          </View>
+        )}
+
+        {/* Tags */}
+        {!!word.tags?.length && (
+          <View style={styles.section}>
+            <Text style={styles.sectionLabel}>Tags</Text>
+            <View style={styles.tagsContainer}>
+              {word.tags.map((tag) => (
+                <View key={tag} style={styles.tagBadge}>
+                  <Text style={styles.tagText}>{tag}</Text>
+                </View>
+              ))}
             </View>
           </View>
         )}
@@ -125,10 +173,11 @@ export default function WordDetailScreen() {
   );
 }
 
-const styles = StyleSheet.create({
+function createStyles(colors: ReturnType<typeof getThemeColors>) {
+  return StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f8f9fa',
+    backgroundColor: colors.background,
   },
   header: {
     flexDirection: 'row',
@@ -136,9 +185,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 16,
     paddingVertical: 12,
-    backgroundColor: '#fff',
+    backgroundColor: colors.surface,
     borderBottomWidth: 1,
-    borderBottomColor: '#e0e0e0',
+    borderBottomColor: colors.border,
   },
   scrollView: {
     flex: 1,
@@ -146,7 +195,7 @@ const styles = StyleSheet.create({
   },
   titleSection: {
     paddingVertical: 24,
-    backgroundColor: '#fff',
+    backgroundColor: colors.surface,
     marginTop: 12,
     borderRadius: 8,
     paddingHorizontal: 16,
@@ -155,12 +204,12 @@ const styles = StyleSheet.create({
   word: {
     fontSize: 40,
     fontWeight: '700',
-    color: '#1a1a1a',
+    color: colors.textPrimary,
     marginBottom: 8,
   },
   pronunciation: {
     fontSize: 16,
-    color: '#666',
+    color: colors.textSecondary,
     fontStyle: 'italic',
     marginBottom: 12,
     fontWeight: '400',
@@ -172,20 +221,20 @@ const styles = StyleSheet.create({
   badge: {
     paddingHorizontal: 12,
     paddingVertical: 6,
-    backgroundColor: '#e8f5f0',
+    backgroundColor: colors.surfaceMuted,
     borderRadius: 16,
     borderWidth: 1,
-    borderColor: '#0F6E56',
+    borderColor: colors.primary,
   },
   badgeText: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#0F6E56',
+    color: colors.primary,
     textTransform: 'capitalize',
   },
   divider: {
     height: 1,
-    backgroundColor: '#e0e0e0',
+    backgroundColor: colors.border,
     marginVertical: 12,
   },
   section: {
@@ -195,7 +244,7 @@ const styles = StyleSheet.create({
   sectionLabel: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#666',
+    color: colors.textSecondary,
     textTransform: 'uppercase',
     marginBottom: 10,
     letterSpacing: 0.5,
@@ -203,26 +252,26 @@ const styles = StyleSheet.create({
   definition: {
     fontSize: 18,
     lineHeight: 28,
-    color: '#333',
+    color: colors.textPrimary,
     fontWeight: '400',
   },
   exampleBox: {
-    backgroundColor: '#f8f9fa',
+    backgroundColor: colors.surfaceMuted,
     paddingHorizontal: 14,
     paddingVertical: 12,
     borderLeftWidth: 3,
-    borderLeftColor: '#0F6E56',
+    borderLeftColor: colors.primary,
     borderRadius: 4,
   },
   example: {
     fontSize: 16,
     lineHeight: 24,
-    color: '#333',
+    color: colors.textPrimary,
     fontStyle: 'italic',
     fontWeight: '400',
   },
   infoSection: {
-    backgroundColor: '#fff',
+    backgroundColor: colors.surface,
     borderRadius: 8,
     paddingHorizontal: 14,
     paddingVertical: 12,
@@ -236,7 +285,7 @@ const styles = StyleSheet.create({
   },
   infoText: {
     fontSize: 12,
-    color: '#999',
+    color: colors.textMuted,
     fontWeight: '400',
   },
   saveButton: {
@@ -245,7 +294,7 @@ const styles = StyleSheet.create({
     borderRadius: 6,
   },
   saveButtonActive: {
-    backgroundColor: '#f0f8f5',
+    backgroundColor: colors.surfaceMuted,
   },
   errorContainer: {
     flex: 1,
@@ -254,10 +303,54 @@ const styles = StyleSheet.create({
   },
   errorText: {
     fontSize: 16,
-    color: '#999',
+    color: colors.textMuted,
     marginTop: 12,
+  },
+  relatedWordsContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  relatedWordChip: {
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    backgroundColor: colors.surfaceMuted,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: colors.primary,
+  },
+  relatedWordText: {
+    fontSize: 13,
+    color: colors.primary,
+    fontWeight: '600',
+    textTransform: 'capitalize',
+  },
+  etymology: {
+    fontSize: 15,
+    lineHeight: 22,
+    color: colors.textPrimary,
+  },
+  tagsContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  tagBadge: {
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    backgroundColor: colors.surfaceMuted,
+    borderRadius: 6,
+    borderWidth: 1,
+    borderColor: colors.border,
+  },
+  tagText: {
+    fontSize: 11,
+    color: colors.textSecondary,
+    fontWeight: '700',
+    textTransform: 'lowercase',
   },
   bottomSpacing: {
     height: 40,
   },
 });
+}

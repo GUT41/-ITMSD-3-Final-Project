@@ -5,6 +5,11 @@ export interface Word {
   example?: string;
   partOfSpeech: string;
   pronunciation?: string;
+  difficulty?: 'beginner' | 'intermediate' | 'advanced';
+  category?: string;
+  tags?: string[];
+  relatedWords?: string[];
+  etymology?: string;
 }
 
 export interface SearchResult extends Word {

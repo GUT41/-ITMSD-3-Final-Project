@@ -26,6 +26,7 @@
     "test": "jest",
     "start": "cross-env EXPO_NO_TYPESCRIPT_SETUP=1 expo start",
     "android": "expo run:android",
+    "generate-words": "node scripts/generate-words.js",
     "ios": "expo run:ios"
   }
 }

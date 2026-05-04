@@ -11,6 +11,8 @@ import { useColorScheme } from 'react-native';
 import { getThemeColors } from '../../src/theme/colors';
 import { useSettingsStore } from '../../src/store/settingsStore';
 
+const MAX_BROWSE_PREVIEW = 200;
+
 export default function SearchScreen() {
   const router = useRouter();
   const systemScheme = useColorScheme();
@@ -26,7 +28,7 @@ export default function SearchScreen() {
   const searchHistory = useSearchStore((state) => state.searchHistory);
   const setSearchQuery = useSearchStore((state) => state.setSearchQuery);
 
-  const savedWordIds = new Set(savedWords.map((w) => w.id));
+  const savedWordIds = useMemo(() => new Set(savedWords.map((w) => w.id)), [savedWords]);
 
   const handleSearch = (text: string) => {
     setInputValue(text);
@@ -55,7 +57,8 @@ export default function SearchScreen() {
     }
   };
 
-  const displayData: SearchResult[] = inputValue.trim() ? results : allWords;
+  const isSearching = !!inputValue.trim();
+  const displayData: SearchResult[] = isSearching ? results : allWords.slice(0, MAX_BROWSE_PREVIEW);
   const showHistory = !inputValue.trim() && searchHistory.length > 0;
 
   return (
@@ -93,7 +96,10 @@ export default function SearchScreen() {
       )}
 
       <Text style={styles.count}>
-        {displayData.length} {inputValue ? 'found' : 'words'} ✓
+        {isSearching
+          ? `${displayData.length} found`
+          : `Showing ${displayData.length} of ${allWords.length} words`}
+        {' '}✓
       </Text>
 
       {displayData.length === 0 && inputValue ? (
@@ -105,6 +111,10 @@ export default function SearchScreen() {
         <FlatList
           data={displayData}
           keyExtractor={(item) => item.id}
+          initialNumToRender={20}
+          maxToRenderPerBatch={24}
+          windowSize={10}
+          removeClippedSubviews
           renderItem={({ item }) => {
             const isSaved = savedWordIds.has(item.id);
             return (
