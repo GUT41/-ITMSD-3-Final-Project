@@ -77,7 +77,7 @@ export default function HomeScreen() {
           <MaterialIcons name="bookmark" size={26} color={colors.primary} />
           <Text style={styles.quickLinkText}>{savedWords.length} Saved</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.quickLink} onPress={() => router.push('/(tabs)/index')}>
+        <TouchableOpacity style={styles.quickLink} onPress={() => router.push('/(tabs)/search')}>
           <MaterialIcons name="search" size={26} color={colors.primary} />
           <Text style={styles.quickLinkText}>Search</Text>
         </TouchableOpacity>

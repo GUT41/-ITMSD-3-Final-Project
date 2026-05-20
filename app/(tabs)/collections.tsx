@@ -4,7 +4,12 @@ import { useRouter } from 'expo-router';
 import { MaterialIcons } from '@expo/vector-icons';
 import { useCollections } from '../../src/hooks/useCollections';
 import { useSearchStore } from '../../src/store/searchStore';
-import { getAllCategories, getWordsByDifficulty, getWordsByCategory } from '../../src/services/dictionaryService';
+import {
+  getAllCategories,
+  getAllWords,
+  getWordsByDifficulty,
+  getWordsByCategory,
+} from '../../src/services/dictionaryService';
 import { useSettingsStore } from '../../src/store/settingsStore';
 import { getThemeColors } from '../../src/theme/colors';
 
@@ -54,17 +59,27 @@ export default function CollectionsScreen() {
             {difficulties.map((diff) => {
               const count = getWordsByDifficulty(diff).length;
               const isActive = difficulty === diff;
+              const label = diff.charAt(0).toUpperCase() + diff.slice(1);
               return (
                 <TouchableOpacity
                   key={diff}
                   style={[styles.filterButton, isActive && styles.filterButtonActive]}
                   onPress={() => setDifficulty(diff)}
                 >
-                  <View style={[styles.difficultyDot, { backgroundColor: getDifficultyColor(diff) }]} />
-                  <Text style={[styles.filterButtonText, isActive && styles.filterButtonTextActive]}>
-                    {diff.charAt(0).toUpperCase() + diff.slice(1)}
+                  <View style={styles.filterButtonTop}>
+                    <View style={[styles.difficultyDot, { backgroundColor: getDifficultyColor(diff) }]} />
+                    <Text
+                      style={[styles.filterButtonText, isActive && styles.filterButtonTextActive]}
+                      numberOfLines={1}
+                      adjustsFontSizeToFit
+                      minimumFontScale={0.75}
+                    >
+                      {label}
+                    </Text>
+                  </View>
+                  <Text style={[styles.filterButtonCount, isActive && styles.filterButtonCountActive]}>
+                    {count.toLocaleString()}
                   </Text>
-                  <Text style={styles.filterButtonCount}>{count}</Text>
                 </TouchableOpacity>
               );
             })}
@@ -72,7 +87,15 @@ export default function CollectionsScreen() {
               style={[styles.filterButton, difficulty === 'all' && styles.filterButtonActive]}
               onPress={() => setDifficulty('all')}
             >
-              <Text style={[styles.filterButtonText, difficulty === 'all' && styles.filterButtonTextActive]}>All</Text>
+              <Text
+                style={[styles.filterButtonText, difficulty === 'all' && styles.filterButtonTextActive]}
+                numberOfLines={1}
+              >
+                All
+              </Text>
+              <Text style={[styles.filterButtonCount, difficulty === 'all' && styles.filterButtonCountActive]}>
+                {getAllWords().length.toLocaleString()}
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -168,25 +191,49 @@ function createStyles(colors: ReturnType<typeof getThemeColors>) {
       marginBottom: 12,
       letterSpacing: 0.5,
     },
-    filterRow: { flexDirection: 'row', gap: 8 },
-    filterButton: {
-      flex: 1,
+    filterRow: {
       flexDirection: 'row',
+      flexWrap: 'wrap',
+      gap: 8,
+    },
+    filterButton: {
+      flexGrow: 1,
+      flexBasis: '47%',
+      minWidth: 148,
+      flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
       gap: 6,
-      paddingVertical: 8,
-      paddingHorizontal: 12,
+      paddingVertical: 10,
+      paddingHorizontal: 10,
       backgroundColor: colors.surface,
       borderRadius: 8,
       borderWidth: 1,
       borderColor: colors.border,
     },
     filterButtonActive: { backgroundColor: colors.primary, borderColor: colors.primary },
-    filterButtonText: { fontSize: 12, fontWeight: '600', color: colors.textPrimary },
+    filterButtonTop: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: 6,
+      width: '100%',
+    },
+    filterButtonText: {
+      flexShrink: 1,
+      fontSize: 13,
+      fontWeight: '600',
+      color: colors.textPrimary,
+      textAlign: 'center',
+    },
     filterButtonTextActive: { color: colors.surface },
-    filterButtonCount: { fontSize: 10, color: colors.textMuted, fontWeight: '700' },
-    difficultyDot: { width: 8, height: 8, borderRadius: 4 },
+    filterButtonCount: {
+      fontSize: 11,
+      color: colors.textMuted,
+      fontWeight: '700',
+    },
+    filterButtonCountActive: { color: colors.surface, opacity: 0.9 },
+    difficultyDot: { width: 8, height: 8, borderRadius: 4, flexShrink: 0 },
     categoryGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 8 },
     categoryButton: {
       flexBasis: '48%',

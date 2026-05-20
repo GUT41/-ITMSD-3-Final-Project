@@ -6,3 +6,6 @@ npm-debug.log
 .DS_Store
 dist/
 coverage/
+data/dictionary_compact.json
+data/wordnet-merged.json
+data/merged-sample.json

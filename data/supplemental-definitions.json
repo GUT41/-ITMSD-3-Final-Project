@@ -1,0 +1,949 @@
+{
+  "email": {
+    "definition": "A system for transferring messages from one computer to another, usually through a network.",
+    "partOfSpeech": "noun",
+    "example": "He sent me his details via email.",
+    "pronunciation": "/ˈiːmeɪl/",
+    "synonyms": []
+  },
+  "website": {
+    "definition": "A collection of interlinked web pages on the World Wide Web that are typically accessible from the same base URL and reside on the same server.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈwɛbˌsaɪt/",
+    "synonyms": []
+  },
+  "pc": {
+    "definition": "A percentage, a proportion (especially per hundred).",
+    "partOfSpeech": "noun",
+    "example": "only a small percent attain the top ranks",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "san": {
+    "definition": "A letter of the Archaic Greek alphabet (uppercase Ϻ, lowercase ϻ) that came after pi and before qoppa.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "blog": {
+    "definition": "A website that allows users to reflect, share opinions, and discuss various topics in the form of an online journal, sometimes letting readers comment on their posts. Most blogs are written in a slightly informal tone (personal journals, news, businesses, etc.)",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/blɑɡ/",
+    "synonyms": []
+  },
+  "login": {
+    "definition": "A combination of a user's identification and password used to enter a computer, program, network, etc.",
+    "partOfSpeech": "noun",
+    "example": "I've forgotten my login again.",
+    "pronunciation": "/ˈlɒɡ.ɪn/",
+    "synonyms": []
+  },
+  "et": {
+    "definition": "To ingest; to be ingested.",
+    "partOfSpeech": "verb",
+    "example": "",
+    "pronunciation": "/ɛt/",
+    "synonyms": []
+  },
+  "st": {
+    "definition": "Expressing a sudden desire for silence.",
+    "partOfSpeech": "interjection",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "tech": {
+    "definition": "Technology",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/tɛk/",
+    "synonyms": []
+  },
+  "linux": {
+    "definition": "Any unix-like operating system distro that uses the Linux kernel.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "jun": {
+    "definition": "A monetary unit of North Korea and formerly of South Korea, equal to one hundredth of a won.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "google": {
+    "definition": "To deliver googlies.",
+    "partOfSpeech": "verb",
+    "example": "",
+    "pronunciation": "/ˈɡuːɡəl/",
+    "synonyms": []
+  },
+  "pdf": {
+    "definition": "Portable Document Format",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "dc": {
+    "definition": "District court",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "homepage": {
+    "definition": "The main or first page of a web site or set of hyperlinked documents.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "pre": {
+    "definition": "Before (something significant).",
+    "partOfSpeech": "preposition",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "da": {
+    "definition": "Father.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/dæ/",
+    "synonyms": []
+  },
+  "stats": {
+    "definition": "A mathematical science concerned with data collection, presentation, analysis, and interpretation.",
+    "partOfSpeech": "noun",
+    "example": "Statistics is the only mathematical field required for many social sciences.",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "shemale": {
+    "definition": "A male-to-female transsexual or transgender person; a trans woman.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈʃi.meɪl/",
+    "synonyms": []
+  },
+  "oz": {
+    "definition": "An avoirdupois ounce, weighing 1/16 of an avoirdupois pound, or 28.3495 grams.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/aʊns/",
+    "synonyms": []
+  },
+  "intel": {
+    "definition": "Intelligence (secret information)",
+    "partOfSpeech": "noun",
+    "example": "Intel is important in espionage.",
+    "pronunciation": "/ˈɪn.tɛl/",
+    "synonyms": []
+  },
+  "ch": {
+    "definition": "A series of interconnected rings or links usually made of metal.",
+    "partOfSpeech": "noun",
+    "example": "He wore a gold chain around the neck.",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "sd": {
+    "definition": "(law enforcement) Initialism of sheriff's department.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "blogger": {
+    "definition": "A contributor to a blog (from weblog) or online journal.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈblɒ.ɡə(ɹ)/",
+    "synonyms": [
+      "blogmaster",
+      "blogster"
+    ]
+  },
+  "latina": {
+    "definition": "A Latin American woman. (Compare Latino.)",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "unsubscribe": {
+    "definition": "An unsubscription.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "bio": {
+    "definition": "Biographical sketch",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈbaɪəʊ/",
+    "synonyms": []
+  },
+  "upskirt": {
+    "definition": "An image of this kind.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈʌpskəːt/",
+    "synonyms": []
+  },
+  "milfs": {
+    "definition": "Short for Mother I'd Like to Fuck, a (putative) mother found sexually attractive",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "pcs": {
+    "definition": "Initialism of permanent change of station.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "blowjobs": {
+    "definition": "(sex) An act of fellatio, or sucking a penis or other phallic object (such as a dildo). Stimulation of a somebody's penis or testicles with a person's lips, tongue or mouth with the purpose of giving the receiver sexual pleasure. It may or may not result in orgasm.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "ee": {
+    "definition": "An eye.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "med": {
+    "definition": "(chiefly in the plural) Medications, especially prescribed psychoactive medications.",
+    "partOfSpeech": "noun",
+    "example": "He's been very strange. I wonder if he's not been taking his meds.",
+    "pronunciation": "/mɛːd/",
+    "synonyms": []
+  },
+  "rm": {
+    "definition": "To move something from one place to another, especially to take away.",
+    "partOfSpeech": "verb",
+    "example": "He removed the marbles from the bag.",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "trans": {
+    "definition": "To cross from one side to another of (gender, sex or something in that vein).",
+    "partOfSpeech": "verb",
+    "example": "",
+    "pronunciation": "/tɹænz/",
+    "synonyms": []
+  },
+  "wishlist": {
+    "definition": "A list of desired things.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈwɪʃlɪst/",
+    "synonyms": []
+  },
+  "ri": {
+    "definition": "The Chinese mile, a traditional unit of distance equal to 1500 chis or 150 zhangs, now standardized as a half-kilometer (500 meters).",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ɹiː/",
+    "synonyms": [
+      "Chinese mile"
+    ]
+  },
+  "rt": {
+    "definition": "A message reposted or forwarded in this way.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "cp": {
+    "definition": "A mapping to a particular character set, where there are several possible sets that share the same code points. Abbreviation: cp.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "telecom": {
+    "definition": "Telecommunication or telecommunications.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "dd": {
+    "definition": "Day, in two-digit, numeric format, as in dd/mm/yyyy",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "tranny": {
+    "definition": "A transsexual, transgender or transvestite person, usually a trans woman.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈtɹæ.ni/",
+    "synonyms": []
+  },
+  "camcorder": {
+    "definition": "A portable electronic device for recording images and audio on to a storage device, hence functioning as a camera and a recorder in a single unit",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈkæmˌkɔɹdɚ/",
+    "synonyms": []
+  },
+  "pl": {
+    "definition": "(physical) An area; somewhere within an area.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "bukkake": {
+    "definition": "A Japanese dish made by pouring broth over cold noodles, commonly udon.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/buˈkæ.ki/",
+    "synonyms": []
+  },
+  "td": {
+    "definition": "Abbreviation of table data. (standard cells that contains data, no table headers)",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "aka": {
+    "definition": "Alternative letter-case form of AKA",
+    "partOfSpeech": "preposition",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "freeware": {
+    "definition": "Complete and functional software that does not require payment or other compensation (such as nags or advertising) for its use. Freeware may be a proprietary license with no access to the source code.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "skype": {
+    "definition": "To make (a telephone call) using Skype software.",
+    "partOfSpeech": "verb",
+    "example": "",
+    "pronunciation": "/skaɪp/",
+    "synonyms": []
+  },
+  "eng": {
+    "definition": "Narrow.",
+    "partOfSpeech": "adjective",
+    "example": "The hole was too eng for him to get through.",
+    "pronunciation": "/ɛŋ/",
+    "synonyms": []
+  },
+  "ef": {
+    "definition": "The name of the Latin-script letter F.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ɛf/",
+    "synonyms": []
+  },
+  "ep": {
+    "definition": "Episode (of a TV serial, etc.)",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "housewares": {
+    "definition": "Homeware.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "slideshow": {
+    "definition": "A presentation of a series of photographic slides, usually with a spoken or recorded explanation.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "photoshop": {
+    "definition": "A digitally altered image.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "bt": {
+    "definition": "On the contrary, rather (as a regular adversative conjunction, introducing a word or clause in contrast or contradiction with the preceding negative clause or sentence).",
+    "partOfSpeech": "conjunction",
+    "example": "I am not rich but [I am] poor  not John but Peter went there.",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "af": {
+    "definition": "To a great extent or degree; very.",
+    "partOfSpeech": "adverb",
+    "example": "It was hot as fuck outside today.",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "hon": {
+    "definition": "(used only to address someone) Honey, sweetheart, a term of endearment; a friendly term of address.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/hʌn/",
+    "synonyms": []
+  },
+  "ebook": {
+    "definition": "(authorship) Electronic book, a book published in electronic form.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "ebooks": {
+    "definition": "(authorship) Electronic book, a book published in electronic form.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "sg": {
+    "definition": "Being only one of a larger population.",
+    "partOfSpeech": "adjective",
+    "example": "A singular experiment cannot be regarded as scientific proof of the existence of a phenomenon.",
+    "pronunciation": "",
+    "synonyms": [
+      "individual"
+    ]
+  },
+  "vic": {
+    "definition": "(law enforcement) A victim of crime.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "antivirus": {
+    "definition": "A piece of software that is used to detect, delete and or neutralize computer-based viruses.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "nav": {
+    "definition": "Navigation. Often used attributively, as in nav beacon.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "cyber": {
+    "definition": "Everything having to do with the Internet considered collectively.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈsʌɪ.bə/",
+    "synonyms": []
+  },
+  "ist": {
+    "definition": "A practitioner or supporter of an ism",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "lc": {
+    "definition": "The minuscule or small letters (a, b, c, as opposed to the uppercase or capital letters, A, B, C).",
+    "partOfSpeech": "noun",
+    "example": "The strongest passwords are those which mix numbers and letters, upper case and lower case, and symbols.",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "oscar": {
+    "definition": "Astronotus ocellatus, a cichlid fish, native to South America, sometimes kept in aquariums.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈɒs.kə/",
+    "synonyms": []
+  },
+  "handjob": {
+    "definition": "The act of stimulating someone's penis or scrotum by someone else's hand.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "inline": {
+    "definition": "Consisting of parts arranged in a single line.",
+    "partOfSpeech": "adjective",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "div": {
+    "definition": "A function, implemented in many programming languages, that returns the result of a division of two integers.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈdɪv/",
+    "synonyms": []
+  },
+  "plugins": {
+    "definition": "Anything that plugs into something.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "reseller": {
+    "definition": "A company or individual that purchases goods or services with the intention of reselling them rather than consuming or using them",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "avi": {
+    "definition": "An avatar displayed by a user's profile on a social networking site.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "geo": {
+    "definition": "(Caithness) An inlet, gully or cleft in the face of a cliff.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ɡjəʊ/",
+    "synonyms": []
+  },
+  "jpeg": {
+    "definition": "An image using the JFIF image file format, containing an image compressed using JPEG compression",
+    "partOfSpeech": "noun",
+    "example": "I'll send you some JPEGs tomorrow.",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "sim": {
+    "definition": "A simulation or simulator.",
+    "partOfSpeech": "noun",
+    "example": "They played a flight sim all afternoon.",
+    "pronunciation": "/sɪm/",
+    "synonyms": []
+  },
+  "ln": {
+    "definition": "(used in street names) A road, street, or similar thoroughfare.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "uc": {
+    "definition": "Collective term for the capital letters A, B, C, ... as opposed to the small letters a, b, c, ....",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "sims": {
+    "definition": "A simulation or simulator.",
+    "partOfSpeech": "noun",
+    "example": "They played a flight sim all afternoon.",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "eco": {
+    "definition": "Environmentally friendly or sensitive.",
+    "partOfSpeech": "adjective",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "transexual": {
+    "definition": "A transsexual person.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "ou": {
+    "definition": "A probably extinct species of Hawaiian honeycreeper, Psittirostra psittacea.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈəʊ.uː/",
+    "synonyms": []
+  },
+  "ht": {
+    "definition": "The distance from the base of something to the top.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "ve": {
+    "definition": "(epicene) Gender-neutral third-person singular subject pronoun, equivalent to singular they.",
+    "partOfSpeech": "pronoun",
+    "example": "",
+    "pronunciation": "/vi/",
+    "synonyms": []
+  },
+  "screenshot": {
+    "definition": "An image of computer or smartphone screen output at a given moment in time.",
+    "partOfSpeech": "noun",
+    "example": "I grabbed a screenshot of my desktop.",
+    "pronunciation": "/ˈskriːn.ʃɒt/",
+    "synonyms": [
+      "screen capture",
+      "screen dump",
+      "screencap",
+      "screencast",
+      "screengrab",
+      "screenie"
+    ]
+  },
+  "trackbacks": {
+    "definition": "A method to keep track of links to content, especially blog entries.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "howto": {
+    "definition": "A brief informal description of how to accomplish a specific task.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "screensaver": {
+    "definition": "A computer program that displays aesthetic patterns or images when the computer is not being used, originally intended to prevent screenburn.",
+    "partOfSpeech": "noun",
+    "example": "I configured my screensaver to appear after only two minutes, because I enjoyed watching it so much.",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "str": {
+    "definition": "A building, wing or dependency set apart and adapted for lodging and feeding (and training) animals with hoofs, especially horses.",
+    "partOfSpeech": "noun",
+    "example": "There were stalls for fourteen horses in the squire's stables.",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "shemales": {
+    "definition": "A male-to-female transsexual or transgender person; a trans woman.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈʃi.meɪlz/",
+    "synonyms": []
+  },
+  "screensavers": {
+    "definition": "A computer program that displays aesthetic patterns or images when the computer is not being used, originally intended to prevent screenburn.",
+    "partOfSpeech": "noun",
+    "example": "I configured my screensaver to appear after only two minutes, because I enjoyed watching it so much.",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "sustainability": {
+    "definition": "The ability to sustain something.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/səsˌteɪnəˈbɪlɪti/",
+    "synonyms": []
+  },
+  "weblogs": {
+    "definition": "A website in the form of an ongoing journal.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": [
+      "blog"
+    ]
+  },
+  "timeline": {
+    "definition": "A graphical representation of a chronological sequence of events (past or future); a chronology.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈtaɪmˌlaɪn/",
+    "synonyms": []
+  },
+  "dem": {
+    "definition": "The act of demonstrating; showing or explaining something.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/dɛm/",
+    "synonyms": []
+  },
+  "pf": {
+    "definition": "Pff",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "eau": {
+    "definition": "Misspelling of Eau",
+    "partOfSpeech": "proper noun",
+    "example": "",
+    "pronunciation": "/juː/",
+    "synonyms": []
+  },
+  "bd": {
+    "definition": "A broad, well-paved and landscaped thoroughfare.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "jake": {
+    "definition": "A juvenile male turkey.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/dʒeɪk/",
+    "synonyms": []
+  },
+  "celebs": {
+    "definition": "A celebrity; a famous person.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "uh": {
+    "definition": "An occurrence of the interjection \"uh\".",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ʌː/",
+    "synonyms": []
+  },
+  "pk": {
+    "definition": "A bundle made up and prepared to be carried; especially, a bundle to be carried on the back, but also a load for an animal, a bale.",
+    "partOfSpeech": "noun",
+    "example": "The horses carried the packs across the plain.",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "ppm": {
+    "definition": "(initialism) (common) Parts per million. (10000 ppm = 1%)",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "exec": {
+    "definition": "Executive, executive officer",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "uri": {
+    "definition": "The aurochs.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "handjobs": {
+    "definition": "The act of stimulating someone's penis or scrotum by someone else's hand.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "smilies": {
+    "definition": "A simplified representation of a smiling face.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "vids": {
+    "definition": "Videotape",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "kinda": {
+    "definition": "Kind of; somewhat",
+    "partOfSpeech": "adverb",
+    "example": "I kinda hafta do this right now.",
+    "pronunciation": "/ˈkaɪndə/",
+    "synonyms": []
+  },
+  "mic": {
+    "definition": "Alternative form of mike",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈmaɪk/",
+    "synonyms": []
+  },
+  "kyle": {
+    "definition": "A narrow channel between islands in Scotland.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/kaɪl/",
+    "synonyms": []
+  },
+  "bw": {
+    "definition": "The weight of a baby at birth.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "lf": {
+    "definition": "The usually green and flat organ that represents the most prominent feature of most vegetative plants.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "nato": {
+    "definition": "A tree of the genus Mora",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "stan": {
+    "definition": "(sometimes derogatory) An extremely obsessive fan of a person, group, character, or creative work, particularly one whose fixation is unhealthy or intrusive.",
+    "partOfSpeech": "noun",
+    "example": "IU stan; BTS stan; K-pop stan",
+    "pronunciation": "/stæn/",
+    "synonyms": []
+  },
+  "wc": {
+    "definition": "(proofreading) Initialism of word choice.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "ty": {
+    "definition": "An expression of gratitude or politeness in response to something done or given.",
+    "partOfSpeech": "interjection",
+    "example": "“Thank you!” said the girl after her mom gave her a gift.",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "mrna": {
+    "definition": "RNA that encodes and carries information from DNA during transcription to sites of protein synthesis to undergo translation in order to yield a protein.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "toolkit": {
+    "definition": "An assembly of tools.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "carmen": {
+    "definition": "A person who transported goods, usually with a horse and cart.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "qt": {
+    "definition": "Quality time.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "sega": {
+    "definition": "A genre of popular music mainly associated with Mauritius.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "cdna": {
+    "definition": "Initialism of complementary DNA.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "barbie": {
+    "definition": "A barbecue (apparatus for grilling).",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/bɑː(ɹ)bi/",
+    "synonyms": []
+  },
+  "dat": {
+    "definition": "(degree) To a given extent or degree.",
+    "partOfSpeech": "adverb",
+    "example": "\"The ribbon was that thin.\" \"I disagree, I say it was not that thin, it was thicker... or maybe thinner...\"",
+    "pronunciation": "/dæt/",
+    "synonyms": []
+  },
+  "snowboard": {
+    "definition": "A board, somewhat like a broad ski, or a very long skateboard with no wheels, used in the sport of snowboarding.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "/ˈsnəʊˌbɔːd/",
+    "synonyms": []
+  },
+  "webcast": {
+    "definition": "A video and/or audio broadcast transmitted via the Internet",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "bbs": {
+    "definition": "A type of pellet that can be shot from a BB gun.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "adware": {
+    "definition": "A software application that includes advertisements, which are displayed while the software is running. Developers use adware as a source of income and to keep the costs of the software down (usually making it free). Some adware programs can include spyware.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "crossword": {
+    "definition": "(games, puzzles) A word puzzle in which interlocking words are entered usually horizontally and vertically into a grid based on clues given for each word.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "groundwater": {
+    "definition": "Water that exists beneath the earth's surface in underground streams and aquifers.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  },
+  "lightbox": {
+    "definition": "A box containing a source of light and a white, translucent cover, used to view photographic transparencies.",
+    "partOfSpeech": "noun",
+    "example": "",
+    "pronunciation": "",
+    "synonyms": []
+  }
+}

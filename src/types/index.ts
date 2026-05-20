@@ -10,6 +10,8 @@ export interface Word {
   tags?: string[];
   relatedWords?: string[];
   etymology?: string;
+  synonyms?: string[];
+  antonyms?: string[];
 }
 
 export interface SearchResult extends Word {
